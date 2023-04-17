@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Snake Game</title>
+   <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+   <div class="container">
+      <div class="game-screen">
+         <h1 class="game-title">Snake Game</h1>
+         <div class="game-stats">
+            <div class="game-stats__item">
+               <span class="game-stats__label">Name:</span>
+               <span id="player-name"></span>
+            </div>
+            <div class="game-stats__item">
+               <span class="game-stats__label">Time:</span>
+               <span id="game-time">00:00</span>
+            </div>
+            <div class="game-stats__item">
+               <span class="game-stats__label">Score:</span>
+               <span id="player-score">0</span>
+            </div>
+            <div class="game-stats__item">
+               <span class="game-stats__label">Lives:</span>
+               <span id="player-lives">3</span>
+            </div>
+         </div>
+         <canvas class="canvas" width="280" height="280"></canvas>
+      </div>
+      <div class="start-screen">
+         <h1 class="start-title">Snake Game</h1>
+         <form id="start-form">
+            <label for="name-input" class="start-label">Name:</label>
+            <input type="text" id="name-input" name="name" class="start-input" required />
+            <button type="submit" class="start-button">Start Game</button>
+         </form>
+      </div>
+      <div class="game-over-screen">
+         <h1 class="game-over-title">Game Over</h1>
+         <div class="game-over-stats">
+            <div class="game-over-stats__item">
+               <span class="game-over-stats__label">Name:</span>
+               <span id="game-over-name"></span>
+            </div>
+            <div class="game-over-stats__item">
+               <span class="game-over-stats__label">Time:</span>
+               <span id="game-over-time">00:00</span>
+            </div>
+            <div class="game-over-stats__item">
+               <span class="game-over-stats__label">Score:</span>
+               <span id="game-over-score">0</span>
+            </div>
+         </div>
+         <button type="button" class="game-over-button" id="restart-button">
+            Restart Game
+         </button>
+         <button type="button" class="game-over-button" id="exit-button">
+            Exit Game
+         </button>
+      </div>
+   </div>
+   <script src="./app.js"></script>
+</body>
+
+</html>

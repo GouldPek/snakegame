@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+   background-color: #f4f4f4;
+}
+
+.container {
+   max-width: 600px;
+   margin: 0 auto;
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.game-screen,
+.start-screen,
+.game-over-screen {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   position: relative;
+}
+
+.game-screen,
+.start-screen {
+   flex: 1;
+}
+
+.game-stats {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 20px 0;
+}
+
+.game-stats__item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 20px;
+}
+
+.game-stats__label,
+.game-over-stats__label {
+   display: block;
+   font-size: 16px;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.canvas {
+   border: 1px solid #cccccc;
+}
+
+.game-title,
+.start-title,
+.game-over-title {
+   font-size: 36px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.start-label {
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.start-input {
+   width: 100%;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 5px;
+   border: 1px solid #aaaaaa;
+   margin-bottom: 20px;
+}
+
+.start-button,
+.game-over-button {
+   padding: 10px 20px;
+   font-size: 16px;
+   margin-top: 20px;
+   border: none;
+   background-color: #428bca;
+   color: #ffffff;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.start-button:hover,
+.game-over-button:hover {
+   background-color: #428bcaad;
+}
+
+.game-over-stats {
+   margin-bottom: 40px;
+}
+
+.game-over-stats__item {
+   margin-bottom: 10px;
+}
+
+.game-over-button+.game-over-button {
+   margin-left: 20px;
+}
+
+.game-over-button:focus,
+.restart-button:focus,
+.exit-button:focus,
+.start-button:focus {
+   outline: none;
+}
+
+.game-over-button:active,
+.restart-button:active,
+.exit-button:active,
+.start-button:active {
+   transform: translateY(1px);
+}
+
+/* Hide all screens except the start screen by default */
+.game-screen,
+.game-over-screen {
+   display: none;
+}
